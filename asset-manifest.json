@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/fashion_detection-alphas/static/css/main.a617e044.chunk.css",
+    "main.js": "/fashion_detection-alphas/static/js/main.6b0f9ff9.chunk.js",
+    "main.js.map": "/fashion_detection-alphas/static/js/main.6b0f9ff9.chunk.js.map",
+    "runtime-main.js": "/fashion_detection-alphas/static/js/runtime-main.3222c77f.js",
+    "runtime-main.js.map": "/fashion_detection-alphas/static/js/runtime-main.3222c77f.js.map",
+    "static/js/2.e84de2eb.chunk.js": "/fashion_detection-alphas/static/js/2.e84de2eb.chunk.js",
+    "static/js/2.e84de2eb.chunk.js.map": "/fashion_detection-alphas/static/js/2.e84de2eb.chunk.js.map",
+    "static/js/3.4a78cca9.chunk.js": "/fashion_detection-alphas/static/js/3.4a78cca9.chunk.js",
+    "static/js/3.4a78cca9.chunk.js.map": "/fashion_detection-alphas/static/js/3.4a78cca9.chunk.js.map",
+    "index.html": "/fashion_detection-alphas/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/fashion_detection-alphas/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.e84de2eb.chunk.js.LICENSE.txt": "/fashion_detection-alphas/static/js/2.e84de2eb.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/fashion_detection-alphas/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3222c77f.js",
+    "static/js/2.e84de2eb.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.6b0f9ff9.chunk.js"
+  ]
+}
