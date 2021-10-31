@@ -2,11 +2,17 @@ import React from 'react'
 import styled from 'styled-components'
 import Pin from "./Pin"
 
-function MainBoard() {
+function MainBoard(props) {
+
+    let {pins} = props;
+
     return (
         <Wrapper>
             <Container>
-                <Pin />
+                {pins.map((pin, index) => {
+                    let {urls} = pin;
+                    return <Pin key={index} urls={urls}/>
+                })}
             </Container>
         </Wrapper>
     )
