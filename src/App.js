@@ -16,15 +16,13 @@ function App() {
   }
 
   const onSearchSubmit = (term) => {
+    console.log("on search submit", term)
     getImages(term)
   }
 
-  onSearchSubmit("bali");
-
-
   return (
     <div className="app">
-        <Header />
+        <Header onSubmit={onSearchSubmit}/>
         <MainBoard />
     </div>
   );
