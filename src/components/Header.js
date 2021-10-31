@@ -3,6 +3,10 @@ import styled from 'styled-components'
 import IconButton from '@mui/material/IconButton';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import SearchIcon from '@mui/icons-material/Search';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import TextsmsIcon from '@mui/icons-material/Textsms';
+import FaceIcon from '@mui/icons-material/Face';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 function Header() {
     return (
@@ -29,10 +33,20 @@ function Header() {
                     </form>
                 </SearchBarWrapper>
             </SearchWrapper>
-            {/* <IconsWrapper>
-
-            </IconsWrapper> */}
-
+            <IconsWrapper>
+                <IconButton>
+                    <NotificationsIcon />
+                </IconButton>
+                <IconButton>
+                    <TextsmsIcon />
+                </IconButton>
+                <IconButton>
+                    <FaceIcon />
+                </IconButton>
+                <IconButton>
+                    <KeyboardArrowDownIcon />
+                </IconButton>
+            </IconsWrapper>
         </Wrapper>
     )
 }
@@ -121,3 +135,5 @@ const SearchBarWrapper = styled.div`
     }
 
 `
+
+const IconsWrapper = styled.div``
