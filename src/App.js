@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import logo from './logo.svg';
 import './App.css';
 import Header from "./components/Header";
@@ -18,6 +18,8 @@ function App() {
     });
   }
 
+
+
   const onSearchSubmit = (term) => {
     console.log("on search submit", term)
     getImages(term).then((res) => {
@@ -35,6 +37,35 @@ function App() {
       setNewPins(newPins);
     })
   }
+
+  const getNewPins = () => {
+    let promises = [];
+    let pinData = [];
+
+    let pins = ['ocean', 'Tokyo', 'dogs', 'cats', 'Bali' ];
+
+    pins.forEach((pinTerm) => {
+      promises.push(
+        getImages(pinTerm).then((res) => {
+          let results = res.data.results;
+
+          pinData = pinData.concat(results);
+
+          pinData.sort(function (a,b) {
+            return 0.5 - Math.random;
+          });
+        })
+      );
+    });
+    Promise.all(promises).then(() => {
+      setNewPins(pinData);
+    })
+  }
+
+  useEffect(() => {
+
+    getNewPins()
+  },  [])
 
   return (
     <div className="app">
