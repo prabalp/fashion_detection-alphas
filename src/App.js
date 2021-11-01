@@ -2,12 +2,15 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import MainBoard from "./components/MainBoard";
-import unsplash from "./api/unsplash";
+import Upload from "./components/UploadPics";
+import unsplash from "./api/unsplash"; //need to remove this
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 // import { PinSharp } from "@mui/icons-material";
 
 function App() {
   const [pins, setNewPins] = useState([]);
 
+  // rendering a all the images
   const getImages = (term) => {
     return unsplash.get("https://api.unsplash.com/search/photos", {
       params: {
@@ -16,6 +19,7 @@ function App() {
     });
   };
 
+  // searching a tag
   const onSearchSubmit = (term) => {
     console.log("on search submit", term);
     getImages(term).then((res) => {
@@ -31,6 +35,7 @@ function App() {
     });
   };
 
+  // refresh every time the page is loaded
   const getNewPins = () => {
     let promises = [];
     let pinData = [];
@@ -62,8 +67,17 @@ function App() {
 
   return (
     <div className="app">
-      <Header onSubmit={onSearchSubmit} />
-      <MainBoard pins={pins} />
+      <BrowserRouter>
+        <Header onSubmit={onSearchSubmit} />
+        <Switch>
+          <Route exact path="/">
+            <MainBoard pins={pins} />
+          </Route>
+          <Route exact path="/upload">
+            <Upload />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
